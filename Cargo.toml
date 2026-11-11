@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "crates/stele-api",
+    "crates/stele-checkpoint",
+    "crates/stele-config",
+    "crates/stele-core",
+    "crates/stele-schema",
+    "crates/stele-store",
+    "crates/stele-sync",
+    "crates/stele-types",
+    "crates/stele-macros",
+    "crates/stele",
+    "crates/stele-cli",
+    "examples/rwax",
+]
+resolver = "2"

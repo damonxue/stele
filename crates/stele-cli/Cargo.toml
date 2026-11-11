@@ -1,0 +1,18 @@
+[package]
+name = "stele-cli"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Command line interface for stele"
+
+[[bin]]
+name = "stele"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive", "env"] }
+stele = { path = "../stele" }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }

@@ -1,0 +1,26 @@
+[package]
+name = "stele-core"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Runtime primitives for stele"
+
+[dependencies]
+alloy-dyn-abi = "1.7"
+alloy-json-abi = "1.7"
+alloy-primitives = "1.7"
+async-trait = "0.1"
+futures-util = "0.3"
+stele-checkpoint = { path = "../stele-checkpoint" }
+stele-config = { path = "../stele-config" }
+stele-schema = { path = "../stele-schema" }
+stele-store = { path = "../stele-store" }
+stele-sync = { path = "../stele-sync" }
+stele-types = { path = "../stele-types" }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt", "sync", "time"] }
+tracing = "0.1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "time"] }

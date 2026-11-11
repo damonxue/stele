@@ -1,0 +1,23 @@
+[package]
+name = "stele"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Facade crate for stele"
+
+[dependencies]
+stele-api = { path = "../stele-api" }
+stele-checkpoint = { path = "../stele-checkpoint" }
+stele-config = { path = "../stele-config" }
+stele-core = { path = "../stele-core" }
+stele-macros = { path = "../stele-macros" }
+stele-schema = { path = "../stele-schema" }
+stele-store = { path = "../stele-store" }
+stele-sync = { path = "../stele-sync" }
+stele-types = { path = "../stele-types" }
+axum = "0.8"
+serde_json = "1"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "postgres", "json"] }
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "net", "sync"] }
+tracing = "0.1"

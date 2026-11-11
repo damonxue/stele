@@ -1,0 +1,19 @@
+[package]
+name = "stele-macros"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Derive macros for stele"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }
+
+[dev-dependencies]
+stele-schema = { path = "../stele-schema" }
+stele-types = { path = "../stele-types" }
+serde_json = "1"
